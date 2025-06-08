@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, GraduationCap, Calendar, MapPin, Award } from "lucide-react";
+import {
+  ChevronDown,
+  GraduationCap,
+  Calendar,
+  MapPin,
+  Award,
+} from "lucide-react";
 
 const education = [
   {
@@ -9,7 +15,7 @@ const education = [
     duration: "2018 – 2022",
     details: "CGPA: 7.2 / 10 (Visvesvaraya Technological University)",
     level: "Bachelor's",
-    color: "from-blue-500 to-purple-600"
+    color: "from-blue-500 to-purple-600",
   },
   {
     degree: "PUC 2nd Year (PCMB)",
@@ -17,7 +23,7 @@ const education = [
     duration: "2017 – 2018",
     details: "Percentage: 87% (Karnataka PUC Board)",
     level: "Pre-University",
-    color: "from-green-500 to-teal-600"
+    color: "from-green-500 to-teal-600",
   },
   {
     degree: "10th Grade",
@@ -25,7 +31,7 @@ const education = [
     duration: "2015 – 2016",
     details: "CGPA: 9.6 / 10 (CBSE Board)",
     level: "Secondary",
-    color: "from-orange-500 to-red-600"
+    color: "from-orange-500 to-red-600",
   },
 ];
 
@@ -65,14 +71,16 @@ const MobileEducation = () => {
             {/* Main Card */}
             <motion.div
               className={`bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 cursor-pointer transition-all duration-300 ${
-                expandedCard === index ? 'bg-white/15' : 'hover:bg-white/15'
+                expandedCard === index ? "bg-white/15" : "hover:bg-white/15"
               }`}
               onClick={() => toggleCard(index)}
               whileTap={{ scale: 0.98 }}
             >
               {/* Card Header */}
               <div className="flex items-start justify-between mb-3">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${edu.color} flex items-center justify-center`}>
+                <div
+                  className={`w-12 h-12 rounded-xl bg-gradient-to-r ${edu.color} flex items-center justify-center`}
+                >
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <motion.div
@@ -123,8 +131,12 @@ const MobileEducation = () => {
                     <div className="flex items-start mb-4">
                       <MapPin className="w-5 h-5 mr-3 mt-0.5 text-blue-400 flex-shrink-0" />
                       <div>
-                        <p className="text-white font-medium text-sm mb-1">Institution</p>
-                        <p className="text-gray-300 text-sm">{edu.institution}</p>
+                        <p className="text-white font-medium text-sm mb-1">
+                          Institution
+                        </p>
+                        <p className="text-gray-300 text-sm">
+                          {edu.institution}
+                        </p>
                       </div>
                     </div>
 
@@ -132,7 +144,9 @@ const MobileEducation = () => {
                     <div className="flex items-start">
                       <Award className="w-5 h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
                       <div>
-                        <p className="text-white font-medium text-sm mb-1">Performance</p>
+                        <p className="text-white font-medium text-sm mb-1">
+                          Performance
+                        </p>
                         <p className="text-gray-300 text-sm">{edu.details}</p>
                       </div>
                     </div>
@@ -142,16 +156,22 @@ const MobileEducation = () => {
                       <div className="flex justify-between items-center text-xs text-gray-400 mb-2">
                         <span>Achievement Level</span>
                         <span>
-                          {edu.details.includes('9.6') ? '9.6/10 CGPA' : 
-                           edu.details.includes('87%') ? '87%' : '7.2/10 CGPA'}
+                          {edu.details.includes("9.6")
+                            ? "9.6/10 CGPA"
+                            : edu.details.includes("87%")
+                            ? "87%"
+                            : "7.2/10 CGPA"}
                         </span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
                         <motion.div
                           initial={{ width: 0 }}
-                          animate={{ 
-                            width: edu.details.includes('9.6') ? '96%' : 
-                                   edu.details.includes('87%') ? '87%' : '72%'
+                          animate={{
+                            width: edu.details.includes("9.6")
+                              ? "96%"
+                              : edu.details.includes("87%")
+                              ? "87%"
+                              : "72%",
                           }}
                           transition={{ delay: 0.5, duration: 1 }}
                           className={`h-2 rounded-full bg-gradient-to-r ${edu.color}`}
@@ -173,9 +193,7 @@ const MobileEducation = () => {
         transition={{ delay: 1 }}
         className="text-center mt-12"
       >
-        <p className="text-gray-400 text-sm">
-          Tap on any card to view details
-        </p>
+        <p className="text-gray-400 text-sm">Tap on any card to view details</p>
       </motion.div>
     </div>
   );
@@ -188,7 +206,7 @@ const DesktopEducation = () => {
       id="education"
       className="w-full bg-white px-6 py-10 flex flex-col items-center"
     >
-      <motion.h2 
+      <motion.h2
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -244,7 +262,7 @@ const DesktopEducation = () => {
               <p className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-3 group-hover:text-green-700 transition-colors duration-300">
                 {edu.institution}
               </p>
-              <p className="text-gray-700 text-sm mt-2 leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed font-medium bg-gray-50 px-4 py-2 rounded-lg group-hover:bg-green-50 transition-colors duration-300">
                 {edu.details}
               </p>
             </motion.div>
@@ -265,9 +283,9 @@ const Education = () => {
     };
 
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
-    return () => window.removeEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   return isMobile ? <MobileEducation /> : <DesktopEducation />;
