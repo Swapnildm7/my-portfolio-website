@@ -87,7 +87,7 @@ const Certificates = () => {
   };
 
   return (
-    <section className="w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 px-6 pt-32 pb-16 relative overflow-hidden">
+    <section className="w-full min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 px-6 pt-32 pb-16 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.04),transparent_50%)] pointer-events-none" />
       <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-20 blur-3xl" />
