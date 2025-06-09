@@ -47,7 +47,7 @@ const certificates = [
   },
   {
     id: 4,
-    title: "C++ Programming",
+    title: "Cpp Programming",
     issuer: "IIT Bombay",
     date: "2019",
     description: "Advanced C++ programming, STL, and modern C++ features",
