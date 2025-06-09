@@ -262,7 +262,7 @@ const Hero = () => {
                 I'm Swapnil,
               </motion.span>
               <br />
-              a passionate Full Stack Developer experienced in building scalable MERN applications. I enjoy solving real-world problems through clean, elegant UI & logic.
+              A passionate Full Stack Developer experienced in building scalable MERN applications. I enjoy solving real-world problems through clean, elegant UI & logic.
             </p>
 
             {/* Animated underline */}

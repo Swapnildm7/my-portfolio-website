@@ -33,7 +33,7 @@ const Footer = () => {
     },
     {
       icon: FaGithub,
-      href: "https://github.com/swapnildm",
+      href: "https://github.com/Swapnildm7",
       color: "text-gray-700",
       hoverColor: "hover:text-black",
       bgColor: "hover:bg-gray-50",

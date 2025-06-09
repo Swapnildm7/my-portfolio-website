@@ -18,7 +18,7 @@ const certificates = [
     id: 1,
     title: "C Programming",
     issuer: "IIT Bombay",
-    date: "2023",
+    date: "2019",
     description: "Fundamental C programming concepts and advanced techniques",
     pdfUrl: C,
     category: "Programming",
@@ -27,8 +27,8 @@ const certificates = [
   {
     id: 2,
     title: "Advanced C Programming",
-    issuer: "Programming Institute",
-    date: "2023",
+    issuer: "IIT Bombay",
+    date: "2019",
     description:
       "Advanced C programming concepts, data structures, and algorithms",
     pdfUrl: AdvanceC,
@@ -38,10 +38,9 @@ const certificates = [
   {
     id: 3,
     title: "Java Programming",
-    issuer: "Oracle Academy",
-    date: "2023",
-    description:
-      "Object-oriented programming with Java and enterprise development",
+    issuer: "Coding Ninjas",
+    date: "2022",
+    description: "Data Structures and Algorithms with Java",
     pdfUrl: Java,
     category: "Programming",
     color: "from-orange-400 to-red-500",
@@ -49,8 +48,8 @@ const certificates = [
   {
     id: 4,
     title: "C++ Programming",
-    issuer: "Programming Academy",
-    date: "2023",
+    issuer: "IIT Bombay",
+    date: "2019",
     description: "Advanced C++ programming, STL, and modern C++ features",
     pdfUrl: Cpp,
     category: "Programming",
@@ -65,13 +64,26 @@ const Certificates = () => {
     window.open(pdfUrl, "_blank");
   };
 
-  const handleDownloadCertificate = (pdfUrl, title) => {
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = `${title.replace(/\s+/g, "_")}.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownloadCertificate = async (pdfUrl, title) => {
+    try {
+      const response = await fetch(pdfUrl);
+      if (!response.ok) throw new Error("Failed to download file");
+
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+
+      const sanitizedTitle = title.trim().replace(/[^\w-]+/g, "_");
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${sanitizedTitle}.pdf`;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
   };
 
   return (

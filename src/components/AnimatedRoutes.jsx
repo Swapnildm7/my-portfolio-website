@@ -8,7 +8,6 @@ import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Certificates from "../pages/Certificates";
 import Contact from "../pages/ContactForm";
-import Resume from "../pages/Resume";
 
 const pageFlipVariants = {
   initial: { rotateY: 90, opacity: 0 },
@@ -58,19 +57,6 @@ const AnimatedRoutes = () => {
               exit="exit"
             >
               <Projects />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/resume"
-          element={
-            <motion.div
-              variants={pageFlipVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
-              <Resume />
             </motion.div>
           }
         />

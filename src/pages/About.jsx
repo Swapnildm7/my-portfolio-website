@@ -67,7 +67,7 @@ const About = () => {
     e.preventDefault();
     setLoading(true);
     setFeedback(null);
-    
+
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -92,6 +92,26 @@ const About = () => {
           });
         }
       );
+  };
+
+  const downloadResume = async () => {
+    try {
+      const response = await fetch(resumePdf);
+      if (!response.ok) throw new Error("Failed to fetch resume");
+
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Swapnil_Matkatte_Resume.pdf"; // Clean filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("Resume download failed:", err);
+    }
   };
 
   return (
@@ -121,9 +141,10 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <motion.a
-                  href={resumePdf}
-                  download="Swapnil Matkatte Resume.pdf"
+                <motion.button
+                  onClick={downloadResume}
+                  type="button"
+                  aria-label="Download Resume"
                   className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white px-6 py-3 lg:px-8 lg:py-4 rounded-2xl font-semibold shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:-translate-y-1 hover:scale-105 text-sm lg:text-base overflow-hidden"
                   whileHover={{
                     boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)",
@@ -174,7 +195,7 @@ const About = () => {
 
                   {/* Shine effect */}
                   <div className="absolute inset-0 -top-2 -bottom-2 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 group-hover:animate-pulse"></div>
-                </motion.a>
+                </motion.button>
               </motion.div>
 
               {/* Section header */}
