@@ -6,10 +6,17 @@ import {
   FaNodeJs,
   FaGithub,
   FaAndroid,
+  FaNode,
   FaJsSquare,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { SiExpress, SiMongodb, SiFirebase, SiGoogleplay } from "react-icons/si";
+import {
+  SiExpress,
+  SiMongodb,
+  SiFirebase,
+  SiGoogleplay,
+  SiRedux,
+} from "react-icons/si";
 
 const projects = [
   {
@@ -26,6 +33,8 @@ const projects = [
     techStack: [
       <FaReact title="React" />,
       <FaNodeJs title="Node.js" />,
+      <FaCss3Alt title="CSS3" />,
+      <FaJsSquare title="JavaScript" />,
       <SiExpress title="Express" />,
       <SiMongodb title="MongoDB" />,
     ],
@@ -46,6 +55,9 @@ const projects = [
       <FaHtml5 title="HTML5" />,
       <FaCss3Alt title="CSS3" />,
       <FaJsSquare title="JavaScript" />,
+      <SiRedux title="Redux Toolkit" />,
+      <FaNode title="Node.js" />,
+      <SiMongodb title="MongoDB" />,
     ],
   },
   {
@@ -57,11 +69,32 @@ const projects = [
       "Optimized app performance by 25% through strategic use of API call minimization, state management techniques, and clean UI design.",
     ],
     image:
-      "https://images.unsplash.com/photo-1574691250077-03a929faece5?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=400&h=400&fit=crop&crop=center",
     github: "",
     playstore:
       "https://play.google.com/store/apps/details?id=org.smartgrains.krishimitra",
     techStack: [<FaAndroid title="Android" />, <SiFirebase title="Firebase" />],
+  },
+  {
+    title: "E-Commerce Marketplace Platform",
+    subtitle: "Enterprise Project",
+    description: [
+      "Engineered a robust, multi-vendor e-commerce platform using React.js, Redux Toolkit, Node.js, and MongoDB, supporting 500+ products and 1,000+ users.",
+      "Integrated advanced features including dynamic search, inventory management, and split payment functionality with Stripe, PayPal, and Razorpay gateways.",
+      "Adopted microservices for authentication, payments, and notifications, enhancing modularity and scaling capability by 200%. Achieved a 95+ Lighthouse performance score.",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=400&h=400&fit=crop&crop=center",
+    github: "",
+    techStack: [
+      <FaReact title="React" />,
+      <FaHtml5 title="HTML5" />,
+      <FaCss3Alt title="CSS3" />,
+      <FaJsSquare title="JavaScript" />,
+      <SiRedux title="Redux Toolkit" />,
+      <FaNode title="Node.js" />,
+      <SiMongodb title="MongoDB" />,
+    ],
   },
 ];
 
