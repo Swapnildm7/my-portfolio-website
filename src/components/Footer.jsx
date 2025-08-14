@@ -25,7 +25,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/swapnil-dm-8065b3291",
+      href: "https://www.linkedin.com/in/swapnildm",
       color: "text-blue-600",
       hoverColor: "hover:text-blue-800",
       bgColor: "hover:bg-blue-50",
@@ -109,7 +109,7 @@ const Footer = () => {
             >
               <span className="text-lg">🌐</span>
               <div className="flex gap-3">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
