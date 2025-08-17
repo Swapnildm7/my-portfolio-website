@@ -1,12 +1,43 @@
-# React + Vite
+# Swapnil Matkatte – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** https://swapnildm.vercel.app
 
-Currently, two official plugins are available:
+Welcome to my personal portfolio—where I showcase my journey, skills, and projects as a MERN-stack developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+##  Tech Stack & Tools
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category         | Technologies                                                                 |
+|------------------|------------------------------------------------------------------------------|
+| **Frameworks**   | React, Vite                                                                  |
+| **Styling**      | Tailwind CSS, Material UI                                                    |
+| **State & Data** | React-Redux, Context API
+| **Testing**      | Jest, React-Testing-Library                                                  |
+| **Backend**      | Node.js and MongoDB (MERN stack)                                             |
+| **Tools**        | Visual Studio Code, Postman, GitHub, Git                                     |
+
+---
+
+##  About the Site
+
+- Built for performance and responsiveness across devices.
+- Showcases my projects like Twitter clone, YouTube clone, Weather app, Finance app, Tic-Tac-Toe, and more.
+- Features a clean UI with animations and modern component design.
+- Provides seamless transitions between sections: Home, Projects, About, Contact.
+
+---
+
+##  How to Run Locally
+
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm or Yarn
+- (Optional) .env file if any environment variables are used
+
+### Setup
+```bash
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+npm install      # or `yarn`
+npm run dev      # or `yarn dev`
