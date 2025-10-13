@@ -6,7 +6,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company: "Virtusky IT Solutions, Pune",
-    duration: "Nov 2022 – Present",
+    duration: "Mar 2023 – Present",
     description: `
 • Developed and optimized multiple web applications, improving system efficiency by 30%.
 • Built RESTful APIs and integrated third-party services, improving backend data flow and security.
@@ -20,7 +20,7 @@ const experiences = [
   {
     title: "Software Engineer Intern",
     company: "SmartGrains, Bangalore",
-    duration: "Jan 2022 – July 2022",
+    duration: "Apr 2022 – Feb 2023",
     description: `
 • Built and optimized responsive web applications using React.js, HTML/CSS, and JavaScript, enhancing user experience and performance.
 • Designed and integrated RESTful APIs with Node.js and Express.js, ensuring seamless data exchange between frontend and backend systems.
